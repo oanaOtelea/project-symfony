@@ -1,0 +1,68 @@
+{% extends 'website/upload.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+     <link href="{{ asset('stylesheets/comment.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block container %}
+
+<div class="container">
+        </div>
+<div class="box">
+    <div class="photo clearfix">
+        <div class="buttons">
+            <div class="button" data-dir="prev" id="prevButton"></div>
+            <div class="button" data-dir="next" id="nextButton"></div>
+        </div>
+        <img class="picture" id="{{ currentPic.id }}" src="{{ asset(currentPic.getWebPath()) }}" />
+    </div>
+    <div class="text">
+        <a id="username" href="{{ path('profile', { 'id': userProfile.getId() }) }}">{{ userProfile.getUsername() }}</a>
+        <p id="date">{{ currentPic.getUploadedDate().format('Y-m-d') }}</p>
+        <a href="{{ path('upload', { 'id': userProfile.getId() }) }}" id="closeButton">X</a>
+        
+        <div class="likelike">
+            {% include 'website/youLikeList.html.twig' %}
+        </div>  
+
+        {% if app.user.id == userProfile.getId() %}
+           <form action="" method="post" {{ form_enctype(formUser) }} class="user">
+                    {{ form_widget(formUser.imageId) }}
+                {% if app.user.imageId == app.request.get('id') %}
+                    {{ form_widget(formUser.unsend) }}
+                {% else %}
+                    {{ form_widget(formUser.send) }}
+                {% endif %}
+           </form>
+       {% endif %}
+
+        <form action="" method="post" {{ form_enctype(formComment) }} class="commentForm">
+            <div class="likeTemplateNumber">
+                {% include 'website/numberOfLikes.html.twig' %}
+            </div> 
+            {{ form_widget(formComment.comment) }} 
+        </form>
+
+        <div id="listWithNames">
+            {% for allLike in allLikes %}
+                <p id="eachName">{{ allLike.usernameSend }}</p>
+            {% endfor %}
+        </div>
+
+        {% if numberOfCommentsRemainToShow > 0 %}
+            <button id="showMoreButton">Show more(<p id="number">{{ numberOfCommentsRemainToShow }}</p>)</button>
+        {% endif %}
+        <div class="comments">
+            {% include 'website/allComments.html.twig' %}
+        </div>
+    </div>
+</div>   
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+
+<script src="{{ asset('js/comment.js') }}" type="text/javascript"></script>
+
+{% endblock %}

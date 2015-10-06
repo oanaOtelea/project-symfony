@@ -1,0 +1,417 @@
+/* line 1, ../sass/screen.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* line 12, ../sass/screen.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 16, ../sass/screen.scss */
+body {
+  line-height: 1;
+}
+
+/* line 20, ../sass/screen.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../sass/screen.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 29, ../sass/screen.scss */
+blockquote:before, blockquote:after {
+  content: none;
+}
+
+/* line 35, ../sass/screen.scss */
+q:before, q:after {
+  content: none;
+}
+
+/* line 40, ../sass/screen.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 45, ../sass/screen.scss */
+a {
+  color: #fff;
+}
+
+/* line 62, ../sass/screen.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444444;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 70, ../sass/screen.scss */
+.clear {
+  clear: both;
+}
+
+/* line 74, ../sass/screen.scss */
+.wrapper {
+  height: auto;
+  margin: auto;
+  width: 1000px;
+  overflow: auto;
+  overflow: hidden;
+}
+/* line 80, ../sass/screen.scss */
+.wrapper a {
+  text-decoration: none;
+}
+/* line 83, ../sass/screen.scss */
+.wrapper span.highlight {
+  color: #F48A00;
+}
+
+/* line 88, ../sass/screen.scss */
+.main-col {
+  float: left;
+  width: 1000px;
+  margin-top: 30px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* line 96, ../sass/screen.scss */
+.sec-col {
+  width: 1000px;
+  margin: auto;
+  height: auto;
+}
+
+/* line 102, ../sass/screen.scss */
+#wrapperOfHeader {
+  background-color: #d82132;
+  width: 1365px;
+  height: 78px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #B51C29;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+}
+/* line 113, ../sass/screen.scss */
+#wrapperOfHeader .logo {
+  float: left;
+  position: relative;
+  display: inline-block;
+  padding: 20px 44px 22px 0;
+  background: #bd1d2c;
+  border-top-right-radius: 38px;
+  border-bottom-right-radius: 38px;
+  margin-left: 150px;
+}
+/* line 122, ../sass/screen.scss */
+#wrapperOfHeader .logo:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  margin-right: -1px;
+  width: 2001px;
+  height: 100%;
+  background: #bd1d2c;
+}
+/* line 133, ../sass/screen.scss */
+#wrapperOfHeader #logoForm, #wrapperOfHeader #menuLink {
+  display: inline-block;
+  position: relative;
+  margin-left: 75px;
+  text-decoration: none;
+  color: #ffffff;
+  font: 300 28px/36px 'Roboto', sans-serif;
+  width: 245px;
+  height: 36px;
+}
+/* line 144, ../sass/screen.scss */
+#wrapperOfHeader #logo {
+  background: url("../images/logo.png") no-repeat scroll 0 0 transparent;
+  content: "";
+  height: 36px;
+  left: 30px;
+  position: absolute;
+  top: 20px;
+  width: 30px;
+}
+/* line 154, ../sass/screen.scss */
+#wrapperOfHeader #logo a {
+  height: 36px;
+  margin-left: 0;
+  width: 30px;
+}
+/* line 160, ../sass/screen.scss */
+#wrapperOfHeader #logo a:hover {
+  cursor: pointer;
+}
+/* line 164, ../sass/screen.scss */
+#wrapperOfHeader .logo h1 {
+  display: inline-block;
+  text-align: left;
+  overflow: hidden;
+}
+/* line 170, ../sass/screen.scss */
+#wrapperOfHeader #menu {
+  float: right;
+  display: block;
+  padding-right: 170px;
+}
+/* line 176, ../sass/screen.scss */
+#wrapperOfHeader ul {
+  padding: 34px 20px 30px;
+  display: inline-block;
+}
+/* line 181, ../sass/screen.scss */
+#wrapperOfHeader .current {
+  color: #444444;
+}
+/* line 185, ../sass/screen.scss */
+#wrapperOfHeader .normal {
+  position: relative;
+  float: left;
+  font: 900 13px/13px 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
+/* line 196, ../sass/screen.scss */
+footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1365px;
+  background-color: #d82132;
+  color: #999999;
+  height: 80px;
+  text-align: center;
+  font: 300 16px/24px 'Roboto', sans-serif;
+}
+
+/* line 208, ../sass/screen.scss */
+footer p {
+  padding-top: 30px;
+  color: #ffffff;
+}
+
+/* line 213, ../sass/screen.scss */
+#arrow {
+  border-color: #bd1d2c transparent;
+  border-style: solid;
+  border-width: 8px 8px 0;
+  margin-top: 2px;
+}
+
+/* line 220, ../sass/screen.scss */
+#arrow:hover {
+  cursor: pointer;
+  border-color: #AA111D transparent;
+}
+
+/* line 225, ../sass/screen.scss */
+.list {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+  display: none;
+  height: 91px;
+  position: absolute;
+  right: 154px;
+  top: 78px;
+  width: 136px;
+}
+
+/* line 237, ../sass/screen.scss */
+.list:after {
+  border-color: #fff transparent;
+  border-style: solid;
+  border-width: 0 14px 13px;
+  bottom: auto;
+  content: "";
+  display: block;
+  left: auto;
+  position: absolute;
+  right: 13px;
+  top: -10px;
+  width: 0;
+}
+
+/* line 251, ../sass/screen.scss */
+#signInForm {
+  margin-left: 14px;
+  width: 222px;
+}
+
+/* line 256, ../sass/screen.scss */
+.signInPopUp {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+  display: none;
+  height: 190px;
+  position: absolute;
+  right: 170px;
+  top: 528px;
+  width: 250px;
+}
+
+/* line 268, ../sass/screen.scss */
+.signInPopUp:after {
+  border-color: #fff transparent;
+  border-style: solid;
+  border-width: 0 14px 13px;
+  bottom: auto;
+  content: "";
+  display: block;
+  left: auto;
+  position: absolute;
+  right: 122px;
+  top: -10px;
+  width: 0;
+}
+
+/* line 282, ../sass/screen.scss */
+#signIn {
+  font: 900 16px/18px "Roboto", sans-serif;
+  margin-bottom: 15px;
+  color: #d82132;
+  margin-left: 14px;
+  margin-top: 20px;
+}
+
+/* line 290, ../sass/screen.scss */
+.normal a:hover {
+  color: #444444;
+  cursor: pointer;
+}
+
+/* line 295, ../sass/screen.scss */
+#usernameLabel, #passwordLabel {
+  font: 900 13px/13px "Roboto", sans-serif;
+  color: #444444;
+}
+
+/* line 300, ../sass/screen.scss */
+#username {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 144px;
+}
+
+/* line 306, ../sass/screen.scss */
+#password {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+  width: 144px;
+}
+
+/* line 313, ../sass/screen.scss */
+#login {
+  background-color: #d82132;
+  border: medium none;
+  color: #fff;
+  height: 30px;
+  margin-top: 15px;
+  width: 50px;
+}
+
+/* line 322, ../sass/screen.scss */
+#login:hover {
+  cursor: pointer;
+  color: #444444;
+}
+
+/* line 327, ../sass/screen.scss */
+#settings {
+  color: #444444;
+  display: block;
+  height: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* line 337, ../sass/screen.scss */
+#settings:hover {
+  background-color: #EA2738;
+}
+
+/* line 345, ../sass/screen.scss */
+#line {
+  background-color: #999595;
+  height: 1px;
+  margin-left: 15px;
+  width: 106px;
+}
+
+/* line 352, ../sass/screen.scss */
+#searchInput {
+  border-radius: 5px;
+  height: 23px;
+  width: 238px;
+}
+
+/* line 358, ../sass/screen.scss */
+#buttonSearch {
+  background-color: transparent;
+  background-image: url("../images/search-iconhh.png");
+  border: medium none;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 32px;
+  cursor: pointer;
+}
+
+/* line 370, ../sass/screen.scss */
+.popUpWithSearchedUsers {
+  background-color: #fff;
+  border: 1px solid #f9e7e3;
+  display: none;
+  height: 340px;
+  left: 76px;
+  position: absolute;
+  top: 59px;
+  width: 241px;
+}
+
+/* line 381, ../sass/screen.scss */
+#searchedUsers {
+  color: #d82132;
+  padding: 10px;
+  width: 221px;
+}
+
+/* line 387, ../sass/screen.scss */
+#searchedUsers:hover {
+  cursor: pointer;
+  background-color: #d82132;
+  color: #fff;
+}
+
+#here-login {
+  color: #d82132;
+}

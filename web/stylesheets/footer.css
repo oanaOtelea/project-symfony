@@ -1,0 +1,10 @@
+/* line 6, ../sass/footer.scss */
+footer p {
+  color: #333;
+  margin-top: 100px;
+}
+
+/* line 12, ../sass/footer.scss */
+footer a {
+  color: #d82132;
+}

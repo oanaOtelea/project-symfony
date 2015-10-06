@@ -1,0 +1,73 @@
+/* line 15, ../sass/upload.scss */
+body {
+  overflow-y: scroll;
+}
+
+/* line 19, ../sass/upload.scss */
+.main-col {
+  width: 1000px;
+  height: auto;
+  min-height: 440px;
+}
+
+/* line 25, ../sass/upload.scss */
+.hidden {
+  display: none;
+}
+
+/* line 30, ../sass/upload.scss */
+#username {
+  font: 900 20px/20px "Roboto", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #d82132;
+}
+
+/* line 37, ../sass/upload.scss */
+#image_save {
+  float: left;
+  margin-top: 10px;
+}
+
+/* line 42, ../sass/upload.scss */
+.upload {
+  padding-bottom: 100px;
+}
+
+/* line 46, ../sass/upload.scss */
+.images {
+  width: 1000px;
+  height: 100%;
+}
+/* line 49, ../sass/upload.scss */
+.images li {
+  float: left;
+  height: 170px;
+  width: 313px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+/* line 56, ../sass/upload.scss */
+.images .image {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* line 62, ../sass/upload.scss */
+.images img {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* line 70, ../sass/upload.scss */
+.images img:hover {
+  cursor: pointer;
+}
+
+/* line 74, ../sass/upload.scss */
+.images li:nth-child(3n+1) {
+  margin-left: 0;
+}

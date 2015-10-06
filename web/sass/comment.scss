@@ -1,0 +1,304 @@
+$paragraphFont: italic, 14px/18px, 'Roboto', sans-serif;
+$bigFont: 900 30px/30px 'Roboto', sans-serif;
+$mediumFont: 900 20px/20px 'Roboto', sans-serif;
+$smallFont: 900 16px/16px 'Roboto', sans-serif;
+$verySmallFont: 13px/14px 'Roboto', sans-serif;
+
+$darkGray: #444444;
+$lightGray: #999999;
+$white: #ffffff;
+$red: #d82132;
+
+$smallMargin: 10px;
+$mediumMargin: 20px;
+$bigMargin: 30px;
+
+.container {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 2;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+
+}
+
+.box {
+    background-color: #fff;
+    height: 490px;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -240px;
+    position: absolute;
+    top: 50%;
+    width: 1190px;
+    z-index: 3;
+
+}
+
+.photo {
+	float: left;
+    height: 490px;
+    width: 845px;
+    background-color: #000; 
+    position: relative;
+}
+.picture {
+	max-height: 100%;
+	max-width: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	display: hidden;
+}
+
+.hidden {
+	display: hidden;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.text {
+	float: right;
+    height: 451px;
+    padding: 20px;
+    position: relative;
+    width: 305px;
+}
+
+#username {
+	color: $red;
+	font: $mediumFont;
+}
+
+#date {
+	border-bottom: 1px solid;
+    color: #F48A00;
+    font-size: 12px;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+
+#closeButton {
+	background-color: #fff;
+    border: medium none;
+    color: #F48A00;
+    font: 900 16px/16px "Roboto",sans-serif;
+    position: absolute;
+    right: 3px;
+    top: 4px;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+#like_save, #delete {
+	background-color: #fff;
+    border: medium none;
+    color: #d82132;
+    margin-left: -8px;
+    margin-top: 30px;
+}
+
+#like_save:hover, #delete:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.commentForm {
+	background-color: #FCEFED;
+	margin-top: 15px;
+    height: auto;
+    padding-top: 5px;
+}
+
+#comment_comment {
+	height: 15px;
+    margin: 10px 0 10px 5px;
+    resize: none;
+    width: 289px;
+}
+
+.commentForm:after {
+	border-color: #FCEFED transparent;
+    border-style: solid;
+    border-width: 0 10px 10px;
+    bottom: auto;
+    content: "";
+    display: block;
+    left: auto;
+    position: absolute;
+    right: 290px;
+    top: 119px;
+    width: 0;
+}
+
+.comment {
+    background-color: #FCEFED;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+#postedBy {
+    font: $smallFont;
+    color: $red;
+}
+
+#postedText {
+    font-size: 13px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+#postedAt {
+    font-size: 12px;
+    color: #F48A00;
+}
+
+.comments {
+    height: 255px;
+    overflow: auto;
+}
+
+#like_likeNumber {
+    display: none;
+}
+
+.buttons {
+    margin-left: 379px;
+    margin-top: 230px;
+    position: absolute;
+    width: 116px;
+}
+
+#prevButton {
+    background: url("../images/br_prev.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 56px;
+    margin-left: -265px;
+    position: absolute;
+    width: 56px;
+}
+
+#nextButton {
+    background: url("../images/br_next.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 56px;
+    margin-left: 315px;
+    position: absolute;
+    width: 56px;
+}
+
+#youLike {
+    padding: 5px 5px 0 5px;
+    color: $darkGray;
+    display: inline;
+    font: $verySmallFont;
+}
+
+#profile_picture_send {
+    background-color: #fff;
+    border: medium none;
+    float: right;
+    color: $red;
+    margin-top: -18px;
+}
+
+#profile_picture_unsend {
+    background-color: #fff;
+    border: medium none;
+    float: right;
+    color: $red;
+    margin-top: -18px;
+}
+
+#profile_picture_send:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.like {
+    width: 40px;
+}
+
+#profile_picture_imageId {
+    display: none;
+}
+
+#showMoreButton {
+    background-color: #fff;
+    border: none;
+    color: $red;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#showMoreButton:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#number {
+    display: inline;
+}
+
+#listWithNames {
+    background-color: #3d3e3f;
+    border-radius: 2px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+    color: #fff;
+    display: block;
+    font: 12px/12px "Roboto",sans-serif;
+    height: auto;
+    max-height: 100px;
+    max-width: 300px;
+    min-height: 20px;
+    min-width: 20px;
+    padding: 5px;
+    position: absolute;
+    right: co;
+    text-align: center;
+    top: 159px;
+    width: auto;
+    display: none;
+}
+
+#listWithNames:after {
+    border-color: #3d3e3f transparent;
+    border-style: solid;
+    border-width: 0 6px 7px;
+    bottom: auto;
+    content: "";
+    display: block;
+    left: auto;
+    position: absolute;
+    right: 13px;
+    top: -7px;
+    width: 0;
+}
+
+#eachName {
+    padding-bottom: 2px;
+}
+
+#numberOfLikes {
+    color: $red; 
+    display: inline;
+    font: $verySmallFont;
+    position: relative;
+    padding-left: 5px;
+}
+
+#numberOfLikes:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

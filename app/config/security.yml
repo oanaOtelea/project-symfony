@@ -1,0 +1,28 @@
+security:
+    encoders:
+        Symfony\WebsiteBundle\Entity\User: bcrypt
+        
+    providers:
+        symfony:
+            entity: { class: Symfony\WebsiteBundle\Entity\User }
+
+    firewalls:
+        main:
+            pattern:    ^/
+            provider:   symfony
+            anonymous:  ~
+            form_login:
+                login_path:      /login
+                check_path:      /login_check
+                success_handler: authentication_handler
+                failure_handler: authentication_handler
+                require_previous_session: false
+            http_basic: true
+            logout:     { path: /logout, target: / }
+            # the rest of your firewall's config
+
+    access_control:
+      - { path: ^/admin, roles: ROLE_ADMIN }
+      - { path: ^/account, roles: IS_AUTHENTICATED_FULLY }
+      - { path: ^/message, roles: IS_AUTHENTICATED_FULLY }
+      - { path: ^/photo, roles: IS_AUTHENTICATED_FULLY }

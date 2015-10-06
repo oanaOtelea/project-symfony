@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('stylesheets/index.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block slider %}
+<div class="wrapperOfSlider">
+    <ul class="slider">
+        <li>
+            <img src="{{ asset('images/1.jpg') }}" class="0" />
+        </li>
+        <li>
+            <img src="{{ asset('images/2.jpg') }}" class="1" />
+        </li>
+        <li>
+            <img src="{{ asset('images/3.jpg') }}" class="2" />
+        </li>
+    </ul>
+
+        <div class="boxJoin">
+            <div class="innerBox">
+                <h2 id="joinText">Join!</h2>
+                <p>It's free</p>
+                <a class="buttonGetStarted" href="{{ path('register') }}">Get started</a>
+            </div>
+        </div>
+        <div class="smallButtons">
+            <div class="oneButton" data-dir="0" id="button-0"></div>
+            <div class="oneButton" data-dir="1" id="button-1"></div>
+            <div class="oneButton" data-dir="2" id="button-2"></div>
+            <input type="hidden" id="valueButtons" name="valueButtons" />
+        </div>   
+ </div>
+{% endblock %}  
+
+{% block body %}
+<div class="aboutUs">
+    <h1>ABOUT US</h1>
+    <div id="lineHeart"></div>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+</div>
+{% endblock %}
+
+
+{% block container %}
+<div class="news">
+    <h1>News</h1>
+    <div id="lineHeart"></div>
+    <h2>Ut wisi enim ad minim veniam, quis nostrud ex</h2>
+    <div class="columns">
+        <div class="column marginRight">
+            <img src="{{ asset('images/index_img08.jpg') }}" />
+            <div class="wrap">
+                <p class="moreInfo"><span class="spanText">21 Jan 2014</span></p>
+                <a class="box"><span class="span">More info</span></a>
+            </div>
+            <p class="text">Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+        </div>
+        <div class="column marginRight">
+            <img src="{{ asset('images/index_img09.jpg') }}" />
+            <div class="wrap">
+                <p class="moreInfo"><span class="spanText">21 Jan 2014</span></p>
+                <a class="box"><span class="span">More info</span></a>
+            </div>
+            <p class="text">Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+        </div>
+         <div class="column">
+            <img src="{{ asset('images/index_img10.jpg') }}" />
+            <div class="wrap">
+                <p class="moreInfo"><span class="spanText">21 Jan 2014</span></p>
+                <a class="box"><span class="span">More info</span></a>
+            </div>
+            <p class="text">Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/login.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/slider.js') }}" type="text/javascript"></script>
+<script>
+var container = $('div.wrapperOfSlider').css('overflow', 'hidden').children('ul'),
+            slider = new Slider( container, $('.smallButtons') );
+
+$('.home').addClass('current');
+
+var reviewObject = {
+
+    init : function() {
+        $('#button-0').addClass('buttonHovered');
+
+        this.initEvents();
+       // this.initialSlider();
+    },
+
+    initialSlider : function() {
+        for (var i = 0; i < 3; i++) {
+         container.animate({'margin-left' :  -( i * 1349 )}, 2000);  
+        }
+        
+    },
+
+    initEvents : function() {
+
+        $('.oneButton').on('click', function() {
+            $(this).addClass('buttonHovered').siblings().removeClass('buttonHovered');
+            $(this).addClass('current').siblings().removeClass('current');
+
+            slider.setCurrent( $(this).data('dir') );
+            valueClicked = $(this).attr('id').split('-');
+            $('#valueButtons').val(valueClicked[1]);
+            value = $('#valueButtons').val();
+
+            container.animate({'margin-left' : -( value * 1349)});  
+            console.log(value);
+        });
+
+        $('.addProfile').on('click', function() {
+            $(this).addClass('current');
+        });
+    }
+};
+
+$( document ).ready(function() {
+    reviewObject.init();
+});
+
+</script>
+{% endblock %}

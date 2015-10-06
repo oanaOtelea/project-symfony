@@ -1,0 +1,38 @@
+{% extends 'website/index.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('stylesheets/homepage.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block slider %} {% endblock %}
+
+{% block sidebar %} {% endblock %}
+
+{% block javascripts %}
+    {% javascripts '@SymfonyWebsiteBundle/Resources/public/js/*'%}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <script>
+    $(document).mouseup(function (e)
+    {
+        var container = $(".list");
+        var arrow =  $('#arrow');
+        if (!container.is(e.target) && !arrow.is(e.target) ) // if the target of the click isn't the container...
+        {
+            container.hide();
+        }
+    });
+ 
+    $('#arrow').on('click', function(e) {
+        e.preventDefault();
+        if ( $( ".list" ).is( ":hidden" ) ) {
+ 
+            $( ".list" ).show();
+ 
+        } else {
+            $(".list").hide();
+        }
+    });
+    </script>
+{% endblock %}

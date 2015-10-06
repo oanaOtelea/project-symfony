@@ -1,0 +1,391 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+ 
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote {
+  &:before, &:after {
+    content: none;
+  }
+}
+ 
+q {
+  &:before, &:after {
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a { color: #fff; } 
+
+$paragraphFont: italic, 14px/18px, 'Roboto', sans-serif;
+$bigFont: 900 30px/30px 'Roboto', sans-serif;
+$mediumFont: 900 16px/18px 'Roboto', sans-serif;
+$smallFont: 900 13px/13px 'Roboto', sans-serif;
+
+$darkGray: #444444;
+$lightGray: #999999;
+$white: #ffffff;
+$red: #d82132;
+
+$smallMargin: 5px;
+$mediumMargin: 15px;
+$bigMargin: 30px;
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $darkGray;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.clear {
+  clear: both;
+}
+
+.wrapper {
+  height: auto;
+  margin: auto;
+  width: 1000px;
+  overflow: auto;
+  overflow: hidden;
+  a {
+    text-decoration: none;
+  }
+  span.highlight {
+    color: #F48A00;
+  }
+}
+
+.main-col {
+  float: left;
+  width: 1000px;
+  margin-top: $bigMargin;
+  height: auto;
+  margin-bottom: $bigMargin;
+}
+
+ .sec-col {
+  width: 1000px;
+  margin: auto;
+  height: auto;
+}
+
+#wrapperOfHeader {
+  background-color: #d82132;
+  width: 1365px;
+  height: 78px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #B51C29;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);
+  .logo {
+    float: left;
+    position: relative;
+    display: inline-block;
+    padding: 20px 44px 22px 0;
+    background: #bd1d2c;
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+    margin-left: 150px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 100%;
+      margin-right: -1px;
+      width: 2001px;
+      height: 100%;
+      background: #bd1d2c;
+    }
+  }
+#logoForm, #menuLink {
+    display: inline-block;
+    position: relative;
+    margin-left: 75px;
+    text-decoration: none;
+    color: #ffffff;
+    font: 300 28px/36px 'Roboto', sans-serif;
+    width: 245px;  
+    height: 36px;  
+}
+
+#logo {
+  background: url("../images/logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  content: "";
+  height: 36px;
+  left: 30px;
+  position: absolute;
+  top: 20px;
+  width: 30px;
+}
+
+#logo a {
+  height: 36px;
+  margin-left: 0;
+  width: 30px;
+}
+
+#logo a:hover {
+  cursor: pointer;
+}
+
+.logo h1 {
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+}
+
+#menu {
+  float: right;
+  display: block;
+  padding-right: 170px;
+}
+
+ul {
+  padding: 34px 20px 30px;
+  display: inline-block;
+}
+
+.current {
+  color: #444444;
+}
+
+.normal {
+  position: relative;
+  float: left;
+  font: 900 13px/13px 'Roboto', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
+}
+
+footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1365px;
+  background-color: #d82132;
+  color: #999999;
+  height: 80px;
+  text-align: center;
+  font: 300 16px/24px 'Roboto', sans-serif;
+}
+
+footer p {
+  padding-top: 30px;
+  color: #ffffff;
+}
+
+#arrow {
+  border-color: #bd1d2c transparent;
+  border-style: solid;
+  border-width: 8px 8px 0;
+  margin-top: 2px;
+}
+
+#arrow:hover {
+  cursor: pointer;
+  border-color: #AA111D transparent;
+}
+
+.list {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+    display: none;
+    height: 91px;
+    position: absolute;
+    right: 154px;
+    top: 78px;
+    width: 136px;
+}
+
+.list:after {
+    border-color: #fff transparent;
+    border-style: solid;
+    border-width: 0 14px 13px;
+    bottom: auto;
+    content: "";
+    display: block;
+    left: auto;
+    position: absolute;
+    right: 13px;
+    top: -10px;
+    width: 0;
+}
+
+#signInForm {
+    margin-left: 14px;
+    width: 222px;
+}
+
+.signInPopUp {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+    display: none;
+    height: 190px;
+    position: absolute;
+    right: 170px;
+    top: 528px;
+    width: 250px;
+}
+
+.signInPopUp:after {
+    border-color: #fff transparent;
+    border-style: solid;
+    border-width: 0 14px 13px;
+    bottom: auto;
+    content: "";
+    display: block;
+    left: auto;
+    position: absolute;
+    right: 122px;
+    top: -10px;
+    width: 0;
+}
+
+#signIn {
+    font: $mediumFont;
+    margin-bottom: $mediumMargin;
+    color: $red;
+    margin-left: 14px;
+    margin-top: 20px;
+}
+
+.normal a:hover {
+  color: $darkGray;
+  cursor: pointer;
+}
+
+#usernameLabel, #passwordLabel {
+  font: $smallFont;
+  color: $darkGray;
+}
+
+#username {
+  margin-top: $smallMargin;
+  margin-bottom: $smallMargin;
+  width: 144px;
+}
+
+#password {
+  margin-top: $smallMargin;
+  margin-bottom: $smallMargin;
+  margin-left: 3px;
+  width: 144px;
+}
+
+#login {
+    background-color: #d82132;
+    border: medium none;
+    color: #fff;
+    height: 30px;
+    margin-top: 15px;
+    width: 50px;
+}
+
+#login:hover {
+    cursor: pointer;
+    color: $darkGray;
+}
+
+#settings {
+  color: #444444;
+  display: block;
+  height: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+#settings:hover {
+  background-color: #EA2738;
+}
+
+#logout {
+
+}
+
+#line {
+  background-color: #999595;
+  height: 1px;
+  margin-left: 15px;
+  width: 106px;
+}
+
+#searchInput {
+  border-radius: 5px;
+  height: 23px;
+  width: 238px;
+}
+
+#buttonSearch {
+  background-color: transparent;
+  background-image: url("../images/search-iconhh.png");
+  border: medium none;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 32px;
+  cursor: pointer;
+}
+
+.popUpWithSearchedUsers {
+  background-color: #fff;
+  border: 1px solid #f9e7e3;
+  display: none;
+  height: 340px;
+  left: 76px;
+  position: absolute;
+  top: 59px;
+  width: 241px;
+}
+
+#searchedUsers {
+  color: #d82132;
+  padding: 10px;
+  width: 221px;;
+}
+
+#searchedUsers:hover {
+  cursor: pointer;
+  background-color: $red;
+  color: #fff;
+}

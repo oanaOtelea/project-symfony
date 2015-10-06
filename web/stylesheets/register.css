@@ -1,0 +1,171 @@
+/* line 15, ../sass/register.scss */
+body {
+  background: url("../images/bg_1.jpg") no-repeat scroll center top transparent;
+}
+
+/* line 19, ../sass/register.scss */
+.main-col {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 796px;
+  margin-left: 300px;
+  width: 400px;
+}
+
+/* line 27, ../sass/register.scss */
+.main-col h1 {
+  color: #d82132;
+  float: left;
+  font: 900 30px/30px "Roboto",sans-serif;
+  margin-top: 25px;
+  margin-left: 115px;
+}
+
+/* line 35, ../sass/register.scss */
+.signInPopUp {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+  display: none;
+  height: 190px;
+  position: absolute;
+  right: 170px;
+  top: 78px;
+  width: 250px;
+}
+
+/* line 47, ../sass/register.scss */
+.register {
+  height: 700px;
+  margin: 90px auto auto;
+  padding: 10px;
+  position: relative;
+  width: 276px;
+}
+
+/* line 55, ../sass/register.scss */
+label {
+  color: #444444;
+  font: 900 16px/16px "Roboto", sans-serif;
+}
+
+/* line 59, ../sass/register.scss */
+.agree {
+  margin-left: 25px;
+  margin-right: -275px;
+}
+
+/* line 63, ../sass/register.scss */
+input {
+  width: 250px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* line 69, ../sass/register.scss */
+#symfony_websitebundle_register_birthday {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 74, ../sass/register.scss */
+#symfony_websitebundle_register_gender {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100px;
+}
+
+/* line 80, ../sass/register.scss */
+.gender {
+  margin-right: 10px;
+}
+
+/* line 84, ../sass/register.scss */
+#symfony_websitebundle_register_agree {
+  margin-left: -5px;
+  width: 20px;
+  margin-bottom: 15px;
+}
+
+/* line 90, ../sass/register.scss */
+#symfony_websitebundle_register_Register {
+  background-color: #d82132;
+  border: medium none;
+  color: #fff;
+  height: 35px;
+  margin-left: 95px;
+  margin-top: 20px;
+  width: 70px;
+}
+
+/* line 100, ../sass/register.scss */
+#symfony_websitebundle_register_Register:hover {
+  cursor: pointer;
+  color: #444444;
+}
+
+/* line 105, ../sass/register.scss */
+.username.required:before {
+  content: "* ";
+  color: #d82132;
+  margin-left: -10px;
+}
+
+.lastname.required:before {
+  content: "* ";
+  color: #d82132;
+  margin-left: -10px;
+}
+
+.firstname.required:before {
+  content: "* ";
+  color: #d82132;
+  margin-left: -10px;
+}
+
+/* line 111, ../sass/register.scss */
+.password.required:before {
+  content: "* ";
+  color: #d82132;
+  margin-left: -10px;
+}
+
+/* line 117, ../sass/register.scss */
+.repeatPassword.required:before {
+  content: "* ";
+  color: #d82132;
+  margin-left: -10px;
+}
+
+/* line 123, ../sass/register.scss */
+.email.required:before {
+  content: "* ";
+  color: #d82132;
+  margin-left: -10px;
+}
+
+/* line 129, ../sass/register.scss */
+.agree.required:before {
+  content: "* ";
+  color: #d82132;
+  margin-left: -5px;
+}
+
+/* line 135, ../sass/register.scss */
+.error {
+  color: #d82132;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* line 141, ../sass/register.scss */
+#error8 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+#success {
+  margin-bottom: -75px;
+  margin-left: 60px;
+  margin-top: 75px;
+}

@@ -1,0 +1,184 @@
+.main-col {
+  min-height: 200px;
+}
+/* line 15, ../sass/homepage.scss */
+#logo {
+  background: url("../images/logo.png") no-repeat scroll 0 0 transparent;
+  content: "";
+  height: 36px;
+  left: 30px;
+  position: absolute;
+  top: 23px;
+  width: 30px;
+}
+
+/* line 26, ../sass/homepage.scss */
+.aboutUs {
+  margin: 50px auto auto;
+  text-align: center;
+  width: 1000px;
+}
+
+/* line 32, ../sass/homepage.scss */
+.aboutUs h1 {
+  font: 900 30px/30px "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #444444;
+  text-align: center;
+}
+
+/* line 39, ../sass/homepage.scss */
+.aboutUs p {
+  color: #999999;
+  font: italic, 14px/18px, "Roboto", sans-serif;
+}
+
+/* line 44, ../sass/homepage.scss */
+.news {
+  width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+/* line 49, ../sass/homepage.scss */
+.news h1 {
+  font: 900 30px/30px "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+/* line 56, ../sass/homepage.scss */
+#lineHeart {
+  margin-bottom: 30px;
+  padding-bottom: 33px;
+  background: url("../images/hbg.png") no-repeat center bottom;
+}
+
+/* line 62, ../sass/homepage.scss */
+.columns {
+  width: 1000px;
+  display: inline-block;
+}
+
+/* line 67, ../sass/homepage.scss */
+.column {
+  width: 301px;
+  text-align: center;
+  float: left;
+  margin-top: 50px;
+}
+
+/* line 74, ../sass/homepage.scss */
+.box:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.12);
+  opacity: 0;
+}
+
+/* line 85, ../sass/homepage.scss */
+.wrap {
+  position: relative;
+  display: block;
+  background: #dfdfdf;
+}
+/* line 89, ../sass/homepage.scss */
+.wrap .moreInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: #d82132;
+  font: 900 14px/18px "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+/* line 102, ../sass/homepage.scss */
+.spanText {
+  display: block;
+  position: relative;
+  width: 145px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  z-index: 1;
+}
+
+/* line 112, ../sass/homepage.scss */
+.box {
+  display: block;
+  padding-left: 146px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #d82132;
+  text-transform: uppercase;
+  font: 900 13px/13px "Roboto", sans-serif;
+}
+
+/* line 123, ../sass/homepage.scss */
+.span {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 128, ../sass/homepage.scss */
+.text {
+  padding-top: 9px;
+  color: #999999;
+}
+
+/* line 133, ../sass/homepage.scss */
+.box:hover {
+  color: #ffffff;
+  background: #f62639;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* line 140, ../sass/homepage.scss */
+.marginRight {
+  margin-right: 48px;
+}
+
+/* line 144, ../sass/homepage.scss */
+.smallButtons {
+  width: 310px;
+  height: 40px;
+  position: absolute;
+  margin-left: 610px;
+  margin-top: 410px;
+}
+
+/* line 152, ../sass/homepage.scss */
+.oneButton {
+  background-image: url("../images/dots.png");
+  background-position: 0 40px;
+  width: 40px;
+  height: 40px;
+  background-repeat: repeat-y;
+  display: inline-block;
+}
+/* line 159, ../sass/homepage.scss */
+.oneButton:hover {
+  background-image: url("../images/dots.png");
+  background-position: 0 0;
+  cursor: pointer;
+}
+
+/* line 166, ../sass/homepage.scss */
+.buttonHovered {
+  background-image: url("../images/dots.png");
+  background-position: 0 0;
+}
+
+/* line 171, ../sass/homepage.scss */
+input {
+  margin-bottom: 0;
+  margin-top: 0;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('stylesheets/screen.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('stylesheets/print.css') }}" type="text/css" rel="stylesheet" />
+            <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+            <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+           
+        {% endblock %}
+    </head>
+    <body>
+    {% block slider %} {% endblock %}
+
+        {% block menu %}
+        <div id="wrapperOfHeader">
+            <div class="logo">
+            {% if app.user == false %}
+                <div id="logo"><a href="{{ path('index') }}" id="menuLink"></a></div>
+                <a href="{{ path('index') }}" id="menuLink">Talk 'n Text</a>
+            {% else %}
+                <div id="logo"><a href="{{ path('homepage', { 'id': app.user.id }) }}" id="menuLink"></a></div>
+                <div id="logoForm">
+                    <input id="searchInput" type="text" placeholder="Search for people" name="search" autocomplete="off">
+                    <button id="buttonSearch" type="submit"></button>
+                </div>
+                <div class="popUpWithSearchedUsers"></div>
+            {% endif %}
+            </div>
+            <div id="menu">
+                <ul class="navigation">
+                {% if app.user == false %}
+                    <li class="normal"><a class="home" href="{{ path('homepage') }}">Home</a></li>
+                    <li class="normal" id="signInMenu"><a id="signInLink">Sign in</a></li>
+                    <li class="normal"><a class="addProfile" href="{{ path('register') }}">Add Profile</a></li>
+
+                    <div class="signInPopUp">
+                        <p id="signIn">Sign in</p>
+
+                        <form action="{{ path('login_check') }}" method="post" id="signInForm">
+                            <label id="usernameLabel" for="username">Username:</label>
+                            <input type="text" id="username" name="_username" value="" />
+
+                            <label id="passwordLabel" for="password">Password:</label>
+                            <input type="password" id="password" name="_password" />
+
+                            {#
+                                To set the target path via the form instead of the session:
+                                <input type="hidden" name="_target_path" value="/account" />
+                            #}
+
+                            <input id="login" type="submit" name="login" value="Sign in" />
+                        </form>
+                    </div>
+                {% else %}
+                    <li class="normal"><a class="profile" href="{{ path('profile', { 'id': app.user.id }) }}">Profile</a></li>
+                    <li class="normal"><a class="messages" href="{{ path('message') }}">Messages</a></li>
+                    <li class="normal"><a id="logout" href="{{ path('logout') }}">Logout</a></li>
+                {% endif %}
+                </ul>
+            </div>
+        </div>
+        
+        {% endblock %}
+        
+        <section class="wrapper">
+            <div class="main-col">
+                {% block body %}{% endblock %}
+            </div>
+            <div class="sidebar">
+             {% block sidebar %} {% endblock %}
+            </div>
+        </section>
+
+        <section class="sec-col">
+           {% block container %} {% endblock %}
+         </section>
+
+        {% block footer %}
+        <footer>
+            <p>Copyright © 2014 | Privacy Policy</p>
+        </footer>
+        {% endblock %}
+    </body>
+</html>
+
+{% block javascripts %}
+    {% javascripts '@SymfonyWebsiteBundle/Resources/public/js/*'%}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+   
+   <script>
+   var loc = window.location.href;
+
+        $(document).mouseup(function (e)
+        {
+            var containerPopUp = $(".signInPopUp");
+            var form = $('#signInForm');
+            var signInLink = $('#signInLink');
+            var username = $('#username');
+            var password = $('#password');
+            var usernameLabel = $('#usernameLabel');
+            var passwordLabel = $('#passwordLabel');
+            var paragraph = $('#signIn');
+            var button = $('#login');
+
+            var container = $(".list");
+            var arrow =  $('#arrow');
+
+            if ( !containerPopUp.is(e.target) && !form.is(e.target) && !username.is(e.target) && !password.is(e.target) && !usernameLabel.is(e.target) && !passwordLabel.is(e.target) && !paragraph.is(e.target) && !button.is(e.target) && !signInLink.is(e.target) && !container.is(e.target) && !arrow.is(e.target) ) 
+            {
+                container.hide();
+                containerPopUp.hide();
+                $('#signInLink').removeClass('current');
+
+                if ( $('.home').hasClass('notCurrent') ) {
+                    $('.home').addClass('current');
+                }
+
+                if ( $('.addProfile').hasClass('notCurrent') ) {
+                    $('.addProfile').addClass('current');
+                }
+            }
+        });
+
+        $('#signInLink').on('click', function(e) {
+            e.preventDefault();
+            if ( $( ".signInPopUp" ).is( ":hidden" ) ) {
+     
+                $( ".signInPopUp" ).show();
+                $(this).addClass('current');
+
+                if ( $('.home').hasClass('current') ) 
+                {
+                    $('.home').removeClass('current');
+                    $('.home').addClass('notCurrent');
+                }
+
+                if ( $('.addProfile').hasClass('current') ) {
+                    $('.addProfile').removeClass('current');
+                    $('.addProfile').addClass('notCurrent');
+                }
+     
+            } else {
+                $(".signInPopUp").hide();
+                $('#signInLink').removeClass('current');
+
+                if ( $('.home').hasClass('notCurrent') ) {
+                    $('.home').addClass('current');
+                }
+
+                if ( $('.addProfile').hasClass('notCurrent') ) {
+                    $('.addProfile').addClass('current');
+                }
+            }
+        });
+
+        $('.home').on('click', function() {
+            $(this).addClass('current');
+        });
+
+        $('.addProfile').on('click', function() {
+            $(this).addClass('current');
+        });
+ 
+        $('#arrow').on('click', function(e) {
+            e.preventDefault();
+            if ( $( ".list" ).is( ":hidden" ) ) {
+     
+                $( ".list" ).show();
+     
+            } else {
+                $(".list").hide();
+            }
+        });
+
+    $('#searchInput').keyup(function() {
+        var searched = $('#searchInput').val();
+        console.log(searched);
+
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            url: loc,
+            data: {searched: searched},
+            success: function (data, textStatus, jqXHR) {
+                    if (data.success) {
+                        $('.popUpWithSearchedUsers').show();
+                        $('.popUpWithSearchedUsers').html(data.template);
+                    } else {
+                        $('.popUpWithSearchedUsers').hide();
+                        console.log('not success');
+                    }
+                },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('.popUpWithSearchedUsers').hide();
+                console.log( errorThrown );
+            }
+            
+        });
+    });
+
+    $('#buttonSearch').on('click', function() {
+        var searched = $('#searchInput').val();
+        console.log(searched);
+
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            url: loc,
+            data: {searched: searched},
+            success: function (data, textStatus, jqXHR) {
+                    if (data.success) {
+                        $('.popUpWithSearchedUsers').show();
+                        $('.popUpWithSearchedUsers').html(data.template);
+                        
+                    } else {
+                        $('.popUpWithSearchedUsers').hide();
+                        console.log('not success');
+                    }
+                },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('.popUpWithSearchedUsers').hide();
+                console.log( errorThrown );
+            }
+            
+        });
+    });
+
+    </script>
+{% endblock %}

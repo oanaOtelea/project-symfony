@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('stylesheets/upload.css') }}" type="text/css" rel="stylesheet" />
+     <link href="{{ asset('stylesheets/comment.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}Account{% endblock %}
+ 
+{% block body %}
+<h1 id="username">{{ userProfile.getUsername() }}'s photos</h1>
+    
+{% if app.user.username == userProfile.getUsername() %}             
+	<form action="" method="post" {{ form_enctype(form) }} class="upload" name="upload">
+       
+        {{ form_row(form.file) }} 
+
+        {{ form_row(form.save) }}
+    </form>
+{% endif %}
+
+<div class="images">
+<ul>
+{% for image in images %}
+    {% if image == true %}
+		<li id="{{ image.id }}">
+            <img id="{{ image.id }}" class="image" src="{{ asset(image.getWebPath()) }}" />
+		</li>
+    {% else %}
+    <p>No pictures to display</p
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/upload.js') }}" type="text/javascript"></script>
+
+<script>
+
+$('.image').on('click', function(e) {
+    e.preventDefault();
+
+    var src = $(this).attr('src');
+    var id = $(this).attr('id');
+
+    var loc = window.location.href;
+    var pathName = loc.split("upload");
+    console.log(pathName);
+    var p = pathName[1].split('=');
+    var newUrl = pathName[0] + 'comment' + p[0] + '=' + id;
+    
+    $('.picture').attr('src', src);
+    $('.picture').attr('id', id);
+
+    window.location.href = newUrl;
+    
+
+});
+
+
+</script>
+{% endblock %}

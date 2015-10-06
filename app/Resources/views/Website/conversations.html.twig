@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %} 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('stylesheets/conversations.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+ 
+{% block title %}Account{% endblock %}
+ 
+{% block body %}
+<div class="conversations">
+    <div class="headerOfConversations">
+        <p id="inbox">Inbox</p>
+    </div>
+{% for user in users %}
+    <li class="conversationWithUser" id="{{ user.id }}">{{ user.username }}</li>
+{% endfor %} 
+</div>
+
+<div class="conversationsPictures">
+{% for photosObject in photosObjects %}
+    {% if photosObject == false %}
+        <li class="profilePicturesOfUsers"><img id="profilePicture" src="{{ asset('images/noimage.jpg') }}" /></li>
+    {% else %}
+        <li class="profilePicturesOfUsers"><img id="profilePicture" src="{{ asset(photosObject.getWebPath()) }}" /></li>
+    {% endif %}
+{% endfor %} 
+</div
+
+<div class="container">
+
+{% block newMessage %}
+<div class="templateNewMessage"> 
+    <div class="childHeader">
+        <a id="nameOfTheUser" href="{{ path('profile', { 'id': app.request.get('id') }) }}">{{ userInConversation.username }}</a>
+        <button id="newMessage">New Message</button>
+    </div>
+    <div class="showMessages">
+    {% block messages %}
+    {% if numberOfMessagesRemainToShow > 0 %}
+        <button id="showMoreButton" class="show">Show more(<p id="number">{{ numberOfMessagesRemainToShow }}</p>)</button>
+    {% elseif numberOfMessagesRemainToShow < 0 %}
+        <button id="showMoreButton" class="hidden">Show more(<p id="number">{{ numberOfMessagesRemainToShow }}</p>)</button>
+    {% endif %}
+    <div class="allMessages">
+        {% include 'website/allMessages.html.twig' %}    
+    </div>
+    {% endblock %}
+    </div>
+</div>
+{% endblock %}
+
+    <div class="sendText">
+        <form action="{{ path('conversations_send', { 'id': app.request.get('id') }) }}" method="post" {{ form_enctype(form) }} class="message">
+            {{ form_widget(form.text) }}
+
+        </form>
+    </div>
+</div>
+<div id="container"></div>
+    <div id="newMessagePopUp">
+        <div class="containerOfPopUp">
+            <button id="closeButtonOfPopUp">X</button>
+            <p id="newMessageTitle">New message</p>
+            <form action="" method="post" {{ form_enctype(formNewMessage) }} class="newMessage">
+            <div class="inputUsername">
+                {{ form_row(formNewMessage.usernameMessageSend) }}
+            </div>
+                {{ form_widget(formNewMessage.text) }}
+                {{ form_widget(formNewMessage.save) }}
+            </form>
+        </div>
+    </div> 
+<div class="popUpWithSearchedUsersForNewMessage"></div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+
+<script src="{{ asset('js/conversations.js') }}" type="text/javascript"></script>
+{% endblock %}

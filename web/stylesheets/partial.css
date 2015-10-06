@@ -1,0 +1,137 @@
+/* line 15, ../sass/partial.scss */
+.main-col {
+  width: 1000px;
+  height: auto;
+  min-height: 429px;
+  position: relative;
+}
+
+/* line 23, ../sass/partial.scss */
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+}
+
+/* line 35, ../sass/partial.scss */
+.box {
+  height: 400px;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -200px;
+  position: absolute;
+  top: 50%;
+  width: 1000px;
+  z-index: 3;
+  background-color: #fff;
+}
+
+/* line 47, ../sass/partial.scss */
+.photo {
+  float: left;
+  height: 400px;
+  width: 690px;
+  background-color: #000;
+}
+
+/* line 53, ../sass/partial.scss */
+#image {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* line 60, ../sass/partial.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 64, ../sass/partial.scss */
+.text {
+  float: right;
+  height: 400px;
+  padding: 20px;
+  width: 270px;
+  position: relative;
+}
+
+/* line 72, ../sass/partial.scss */
+#username {
+  color: #d82132;
+  font: 900 20px/20px "Roboto", sans-serif;
+}
+
+/* line 77, ../sass/partial.scss */
+#date {
+  border-bottom: 1px solid;
+  color: #f7b4a5;
+  font-size: 12px;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+/* line 85, ../sass/partial.scss */
+#closeButton {
+  background-color: #fff;
+  border: medium none;
+  color: #f7b4a5;
+  font: 900 16px/16px "Roboto",sans-serif;
+  position: absolute;
+  right: -4px;
+  top: 4px;
+}
+
+/* line 95, ../sass/partial.scss */
+#closeButton:hover {
+  cursor: pointer;
+}
+
+/* line 99, ../sass/partial.scss */
+#like_likeNumber {
+  background-color: #fff;
+  border: medium none;
+  color: #d82132;
+  margin-left: -8px;
+  margin-top: 30px;
+}
+
+/* line 107, ../sass/partial.scss */
+#like_likeNumber:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 112, ../sass/partial.scss */
+.comment {
+  background-color: #f7b4a5;
+  margin-top: 15px;
+}
+
+/* line 117, ../sass/partial.scss */
+#comment_comment {
+  margin: 20px;
+  resize: none;
+  width: 220px;
+}
+
+/* line 123, ../sass/partial.scss */
+.comment:after {
+  border-color: #f7b4a5 transparent;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  bottom: auto;
+  content: "";
+  display: block;
+  left: auto;
+  position: absolute;
+  right: 257px;
+  top: 119px;
+  width: 0;
+}

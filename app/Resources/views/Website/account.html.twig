@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('stylesheets/account.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}Account{% endblock %}
+
+{% block body %}
+<div class="containerForm">
+    <div class="sectionOne">
+        <div class="picture">
+        {% if photo == false %} 
+            <img id="profilePicture" src="{{ asset('images/noimage.jpg') }}" />
+        {% else %}
+            <img id="profilePicture" src="{{ asset(photo.getWebPath()) }}" />
+        {% endif %}
+        </div>
+        <div class="username">
+            <h1 id="name">{{ profile.getUsername() }}'s profile</h1>
+            <a id="uploadPhotos" href="{{ path('upload', { 'id': app.request.get('id') }) }}">Photos</a>
+        </div>
+    </div>
+    <div class="sectionTwo">
+        <div class="about">
+            <p id="titleAbout">About</p>
+            {% if app.user.id == app.request.get('id') %}
+                <p id="buttonEdit">Edit</p>      
+            {% endif %}
+        </div>
+        <ul class="keys">
+            <li>Lastname</>
+            <li>Firstname</>
+            <li>Birthday</li>
+            <li>Gender</li>
+        </ul>
+        <ul class="values">
+            <li>{{ profile.getLastname() }}</>
+            <li>{{ profile.getFirstname() }}</>
+            <li>{{ profile.getBirthday().format('Y-m-d') }}</li>
+            <li>{{ profile.getGender() }}</li>
+        </ul>
+    </div>
+
+    <form action="" method="post" {{ form_enctype(form) }} class="update hidden">
+        <div class="leftPartOfForm">
+            {{ form_row(form.lastname) }}
+            {{ form_row(form.firstname) }}
+            {{ form_row(form.birthday) }}
+            {{ form_row(form.gender) }}
+        </div>
+
+        <div class="rightPartOfForm">
+            {{ form_row(form.username) }}
+            {{ form_row(form.password) }}
+            {{ form_row(form.email) }}
+        </div>
+
+        {{ form_row(form.save) }}
+        <button id="cancel">Cancel</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset('js/profile.js') }}" type="text/javascript"></script>
+
+<script>
+    $('.profile').addClass('current');
+</script>
+{% endblock %}

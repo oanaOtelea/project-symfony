@@ -1,0 +1,78 @@
+_wdt:
+    resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"
+    prefix:   /_wdt
+
+_profiler:
+    resource: "@WebProfilerBundle/Resources/config/routing/profiler.xml"
+    prefix:   /_profiler
+
+_configurator:
+    resource: "@SensioDistributionBundle/Resources/config/routing/webconfigurator.xml"
+    prefix:   /_configurator
+
+_main:
+    resource: routing.yml
+
+index: 
+    pattern: /
+    defaults: { _controller: SymfonyWebsiteBundle:Website:index }
+    
+login:
+    pattern: /login
+    defaults: { _controller: SymfonyWebsiteBundle:Website:login }
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
+    defaults: { _controller: SymfonyWebsiteBundle:Website:logout }
+
+register:
+    pattern:   /register
+    defaults:  { _controller: SymfonyWebsiteBundle:Website:register }
+
+profile:
+    pattern:    /account/profile
+    defaults:   { _controller: SymfonyWebsiteBundle:User:profile }
+
+profile_update:
+    path:   /account/profile
+
+email:
+    pattern:    /email
+    defaults:   { _controller: SymfonyWebsiteBundle:Website:email }
+
+show:
+    pattern:    /show
+    defaults:   { _controller: SymfonyWebsiteBundle:Website:show }
+
+upload:
+    pattern:    /photo/upload
+    defaults:   { _controller: SymfonyWebsiteBundle:Photo:upload }
+
+conversations: 
+    pattern: /message/conversations
+    defaults: { _controller: SymfonyWebsiteBundle:Message:conversations }
+
+message: 
+    pattern: /message
+    defaults: { _controller: SymfonyWebsiteBundle:Message:message }
+
+conversations_display: 
+    path: /message/conversations
+
+conversations_send:
+    path: /message/conversations
+    
+comment:
+    pattern: /photo/comment
+    defaults: { _controller: SymfonyWebsiteBundle:Photo:comment }
+
+homepage:
+    pattern: /account/homepage
+    defaults: { _controller: SymfonyWebsiteBundle:User:homepage }
+
+admin:
+    pattern: /admin
+    defaults: { _controller: SymfonyWebsiteBundle:Website:admin }
+

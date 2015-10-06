@@ -1,0 +1,233 @@
+/* line 15, ../sass/account.scss */
+body {
+  background-color: #f4f4f4;
+}
+
+/* line 19, ../sass/account.scss */
+.hidden {
+  display: none;
+}
+
+/* line 23, ../sass/account.scss */
+.main-col {
+  height: auto;
+  width: 1000px;
+}
+
+/* line 28, ../sass/account.scss */
+#name {
+  font: 900 30px/30px "Roboto", sans-serif;
+  color: #d82132;
+  margin-bottom: 20px;
+}
+
+/* line 34, ../sass/account.scss */
+#usernameConversations {
+  display: block;
+  margin-bottom: 20px;
+  color: #F48A00;
+}
+
+/* line 40, ../sass/account.scss */
+#uploadPhotos {
+  color: #F48A00;
+  font: 900 20px/20px "Roboto", sans-serif;
+}
+
+/* line 45, ../sass/account.scss */
+.conversations {
+  margin-top: 50px;
+  border: 1px solid #d82132;
+  height: 630px;
+}
+
+/* line 51, ../sass/account.scss */
+.conversations li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font: 900 16px/16px "Roboto", sans-serif;
+  text-align: center;
+}
+
+/* line 58, ../sass/account.scss */
+.update {
+  margin-top: -231px;
+  position: absolute;
+  text-align: center;
+  width: 959px;
+  background-color: #e8e5e5;
+  height: 240px;
+}
+
+/* line 68, ../sass/account.scss */
+label {
+  color: #444444;
+  font: 900 16px/16px "Roboto", sans-serif;
+}
+
+/* line 73, ../sass/account.scss */
+.update input {
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 250px;
+}
+
+/* line 80, ../sass/account.scss */
+#symfony_websitebundle_update_birthday {
+  display: inline;
+  margin-bottom: 15px;
+  margin-left: 134px;
+  margin-top: 15px;
+}
+
+/* line 87, ../sass/account.scss */
+#symfony_websitebundle_update_gender {
+  margin-bottom: 15px;
+  margin-left: 192px;
+  margin-top: 15px;
+  width: 100px;
+}
+
+/* line 94, ../sass/account.scss */
+#symfony_websitebundle_update_save {
+  margin-left: -95px;
+  margin-top: 200px;
+  width: 60px;
+}
+
+/* line 100, ../sass/account.scss */
+.leftPartOfForm {
+  float: left;
+  width: 390px;
+}
+
+/* line 105, ../sass/account.scss */
+.rightPartOfForm {
+  float: right;
+  width: 450px;
+}
+
+/* line 110, ../sass/account.scss */
+#symfony_websitebundle_update_username {
+  margin-left: 76px;
+}
+
+/* line 114, ../sass/account.scss */
+#symfony_websitebundle_update_password_first {
+  margin-left: 73px;
+}
+
+/* line 118, ../sass/account.scss */
+#symfony_websitebundle_update_email {
+  margin-left: 112px;
+}
+
+/* line 122, ../sass/account.scss */
+.containerForm {
+  background-color: #fff;
+  border: 1px solid #d82132;
+  border-radius: 5px;
+  height: 700px;
+  padding: 20px;
+  width: 958px;
+}
+
+/* line 131, ../sass/account.scss */
+.picture {
+  background-color: #444;
+  border-radius: 5px;
+  float: left;
+  height: 250px;
+  padding: 20px;
+  width: 285px;
+}
+
+/* line 140, ../sass/account.scss */
+#profilePicture {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* line 147, ../sass/account.scss */
+.username {
+  float: right;
+  height: 248px;
+  padding: 20px;
+  width: 570px;
+}
+
+/* line 154, ../sass/account.scss */
+.about {
+  border-bottom: 1px solid #d82132;
+  border-top: 1px solid #d82132;
+  color: #d82132;
+  margin-top: 40px;
+  padding: 20px;
+  height: 20px;
+}
+
+/* line 163, ../sass/account.scss */
+.sectionOne {
+  height: 291px;
+}
+
+/* line 167, ../sass/account.scss */
+.sectionTwo {
+  height: 300px;
+  position: relative;
+}
+
+/* line 172, ../sass/account.scss */
+.keys {
+  float: left;
+  font: 900 16px/16px "Roboto",sans-serif;
+  height: 200px;
+  width: 200px;
+}
+
+/* line 179, ../sass/account.scss */
+.values {
+  float: right;
+  font: 900 16px/16px "Roboto",sans-serif;
+  height: 200px;
+  width: 620px;
+}
+
+/* line 186, ../sass/account.scss */
+.keys li {
+  padding: 20px;
+}
+
+/* line 190, ../sass/account.scss */
+.values li {
+  padding: 20px;
+}
+
+/* line 194, ../sass/account.scss */
+#titleAbout {
+  float: left;
+  font: 900 20px/20px "Roboto",sans-serif;
+}
+
+/* line 199, ../sass/account.scss */
+#buttonEdit {
+  float: right;
+  font: italic 14px/18px "Roboto", sans-serif;
+}
+
+/* line 204, ../sass/account.scss */
+#buttonEdit:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 209, ../sass/account.scss */
+#cancel {
+  float: right;
+  margin-right: 430px;
+  margin-top: -24px;
+  width: 60px;
+}

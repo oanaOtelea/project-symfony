@@ -1,0 +1,78 @@
+$paragraphFont: italic, 14px/18px, 'Roboto', sans-serif;
+$bigFont: 900 30px/30px 'Roboto', sans-serif;
+$mediumFont: 900 20px/20px 'Roboto', sans-serif;
+$smallFont: 900 16px/16px 'Roboto', sans-serif;
+
+$darkGray: #444444;
+$lightGray: #999999;
+$white: #ffffff;
+$red: #d82132;
+
+$smallMargin: 10px;
+$mediumMargin: 20px;
+$bigMargin: 30px;
+
+body {
+	overflow-y: scroll;
+}
+
+.main-col {
+	width: 1000px;
+	height: auto;
+	min-height: 429px;
+}
+
+.hidden {
+	display: none;
+}
+
+
+#username {
+	font: $mediumFont;
+	margin-top: $smallMargin;
+	margin-bottom: $bigMargin;
+	color: $red;
+}
+
+#image_save {
+	float: left;
+    margin-top: 10px;
+}
+
+.upload {
+	padding-bottom: 100px;
+}
+
+.images {
+	width: 1000px;
+	height: 100%;
+	li {
+		float: left;
+    	height: 170px;
+    	width: 313px;
+    	margin-left: 30px;
+    	margin-bottom: 30px;
+	}
+	.image {
+		max-height:100%; 
+		max-width:100%; 
+		min-width:100%; 
+		min-height:100%;
+	}
+	img {
+		max-height:100%; 
+		max-width:100%; 
+		min-width:100%; 
+		min-height:100%;
+	}
+}
+
+.images img:hover {
+	cursor: pointer;
+}
+
+.images li:nth-child(3n+1) {
+	margin-left: 0;
+}
+
+

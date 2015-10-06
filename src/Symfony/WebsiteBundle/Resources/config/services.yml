@@ -1,0 +1,13 @@
+parameters:
+    symfony_security.authentication_handler: Symfony\WebsiteBundle\Controller\AuthenticationHandler
+
+services:
+    authentication_handler:
+        class:  %symfony_security.authentication_handler%
+        arguments:  [@router]
+        tags:
+            - { name: 'monolog.logger', channel: 'security' }
+
+    chat:
+        class: Symfony\WebsiteBundle\Controller\Chat
+        arguments: [@doctrine.orm.default_entity_manager]

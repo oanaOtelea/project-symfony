@@ -1,0 +1,21 @@
+{% for searchedUser in searchedUsers %}
+    <li class="searchedUsers" id="{{ searchedUser.id }}">{{ searchedUser.username }}</li>
+{% endfor %} 
+
+{% block javascripts %}
+    {% javascripts '@SymfonyWebsiteBundle/Resources/public/js/*'%}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+   
+<script>
+var loc = window.location.href;
+
+$('.searchedUsers').on('click', function() {
+        var usernameChose = $(this).text();
+        $('#new_message_usernameMessageSend').val(usernameChose);
+        $('#clearButton').removeClass('hidden');
+        $('.popUpWithSearchedUsersForNewMessage').hide();
+    });
+
+</script>
+{% endblock %}

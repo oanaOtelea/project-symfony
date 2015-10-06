@@ -1,0 +1,53 @@
+{% if existingLike == false %}
+        <button id="like_save" class="likeButton">Like</button>
+{% else %}
+    <button id="delete" class="likeButton">Unlike</button>
+{% endif %}
+
+{% block javascripts %}
+    {% javascripts '@SymfonyWebsiteBundle/Resources/public/js/*'%}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+   
+   <script>
+   $('.likeButton').on('click', function(e) {
+            e.preventDefault();
+            var elem = document.getElementById('like_save');
+            var element = $(this).attr('id');
+            console.log(element);
+            var $form = $(this).closest('form');
+            var $post = $form.attr('method');
+             var loc = window.location.href;
+             var url = loc.split('=');
+           if ( element == 'like_save') {
+            var $data = {idOfImage1: url[1]};
+        } else if (element == 'delete') {
+            var $data = {idOfImage2: url[1]};
+        }
+            
+            
+            var loc = window.location.href;
+             console.log($data);
+            $.ajax({
+                dataType: "json",
+                type: "POST",
+                url: loc,
+                data: $data,
+                success: function (data, textStatus, jqXHR) {
+                    if (data.success) {
+                        $('.likelike').html(data.templateAllLikes);
+                        $('.likeTemplateNumber').html(data.templateNumberOfLikes);
+                        
+
+                    } else {
+                        console.log('not success');
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log( errorThrown );
+                }
+                    
+            });
+        });
+    </script>
+{% endblock %}

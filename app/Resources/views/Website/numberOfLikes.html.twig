@@ -1,0 +1,17 @@
+{% if existingLike == true %}
+    {% if counts > 1 %}
+        <p id="numberOfLikes">{{ counts }} others</p><p id="youLike">and You like this</p>
+    {% elseif counts == 1 %}
+        <p id="numberOfLikes">{{ counts }} other</p><p id="youLike">and You like this</p>
+    {% else %} 
+        <p id="youLike">You like this</p>
+    {% endif %}
+{% else %}
+    {% if counts == 1 %}
+        <p id="numberOfLikes">{{ counts }} other</p><p id="youLike">likes this</p>
+    {% elseif counts > 1 %}
+        <p id="numberOfLikes">{{ counts }} others</p><p id="youLike">like this</p>
+    {% else %}
+        <p></p>
+    {% endif %}
+{% endif %}

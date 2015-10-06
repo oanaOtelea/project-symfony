@@ -1,0 +1,414 @@
+/* line 15, ../sass/conversations.scss */
+#wrapperOfHeader {
+  height: 79px;
+}
+
+/* line 19, ../sass/conversations.scss */
+.main-col {
+  width: 1000px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 500px;
+  position: relative;
+}
+
+/* line 27, ../sass/conversations.scss */
+.conversations {
+  width: 235px;
+  height: 500px;
+  border-right: 1px solid #F9E7E3;
+  border-left: 1px solid #F9E7E3;
+  top: 0;
+  position: absolute;
+}
+
+/* line 36, ../sass/conversations.scss */
+.conversationWithUser {
+  color: #f48a00;
+  font: 900 16px/16px "Roboto",sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid #F9E7E3;
+  height: 40px;
+  padding-top: 20px;
+  width: 235px;
+}
+
+/* line 47, ../sass/conversations.scss */
+.conversationWithUser:last-child {
+  border-bottom: 1px solid #F9E7E3;
+}
+
+/* line 51, ../sass/conversations.scss */
+.conversationWithUser:hover {
+  background-color: #F9F3F2;
+  cursor: pointer;
+}
+
+/* line 56, ../sass/conversations.scss */
+.clicked:hover {
+  background-color: #d82132;
+  cursor: pointer;
+}
+
+/* line 61, ../sass/conversations.scss */
+.clicked {
+  color: #fff;
+  font: 900 16px/16px "Roboto",sans-serif;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+  padding-top: 20px;
+  width: 235px;
+  background-color: #d82132;
+  cursor: pointer;
+}
+
+/* line 73, ../sass/conversations.scss */
+.box2 {
+  padding: 0 10px 10px;
+  display: inline-block;
+  width: 726px;
+}
+
+/* line 79, ../sass/conversations.scss */
+.hidden {
+  display: none;
+}
+
+/* line 83, ../sass/conversations.scss */
+#name {
+  color: #d82132;
+  font: 900 16px/16px "Roboto",sans-serif;
+  padding-top: 10px;
+}
+
+/* line 89, ../sass/conversations.scss */
+#text {
+  float: left;
+  font-family: Arial;
+  height: auto;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  width: 530px;
+  word-break: break-all;
+}
+
+/* line 99, ../sass/conversations.scss */
+#date {
+  color: #f7b4a5;
+  float: right;
+  margin-top: -15px;
+}
+
+/* line 105, ../sass/conversations.scss */
+.container {
+  border-right: 1px solid #F9E7E3;
+  float: left;
+  height: 500px;
+  margin-left: 236px;
+  margin-top: -500px;
+  position: relative;
+  width: 763px;
+}
+
+/* line 115, ../sass/conversations.scss */
+#message_text {
+  height: 50px;
+  margin-left: 181px;
+  margin-top: 25px;
+  resize: none;
+  width: 400px;
+  border: 1px solid #F9E7E3;
+}
+
+/* line 124, ../sass/conversations.scss */
+.showMessages {
+  height: 339px;
+  left: 237px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top: 60px;
+  width: 762px;
+  border-right: 1px solid #F9E7E3;
+}
+
+/* line 135, ../sass/conversations.scss */
+.sendText {
+  background-color: #F9F3F2;
+  border-right: 1px solid #F9E7E3;
+  border-top: 1px solid #F9E7E3;
+  bottom: 0;
+  height: 100px;
+  left: 237px;
+  position: absolute;
+  width: 762px;
+  box-shadow: 2px -2px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* line 147, ../sass/conversations.scss */
+#showMoreButton {
+  background-color: #fff;
+  border: none;
+  color: #d82132;
+  margin-left: 315px;
+  margin-top: 10px;
+}
+
+/* line 155, ../sass/conversations.scss */
+#showMoreButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* line 160, ../sass/conversations.scss */
+#number {
+  display: inline;
+}
+
+/* line 164, ../sass/conversations.scss */
+#profilePicture {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* line 170, ../sass/conversations.scss */
+.profilePicturesOfUsers {
+  height: 41px;
+  padding: 10px;
+  width: 41px;
+}
+
+/* line 176, ../sass/conversations.scss */
+.conversationsPictures {
+  left: 30px;
+  position: absolute;
+  top: 60px;
+}
+
+/* line 182, ../sass/conversations.scss */
+.header {
+  position: absolute;
+  width: 998px;
+  height: 60px;
+  top: 0;
+  border-left: 1px solid #F9E7E3;
+  border-right: 1px solid #F9E7E3;
+  border-bottom: 1px solid #F9E7E3;
+  display: inline;
+}
+
+/* line 193, ../sass/conversations.scss */
+#inbox {
+  color: #f48a00;
+  float: left;
+  font: 900 16px/16px "Roboto", sans-serif;
+  margin: 22px 0 0 35px;
+  text-align: center;
+  width: 50px;
+}
+
+/* line 202, ../sass/conversations.scss */
+#verticalLine {
+  height: 60px;
+  width: 1px;
+  background-color: #F9E7E3;
+  float: left;
+  margin-left: 150px;
+}
+
+/* line 210, ../sass/conversations.scss */
+#nameOfTheUser {
+  color: #d82132;
+  float: left;
+  font: 900 20px/20px "Roboto",sans-serif;
+  margin: 20px 0 20px 10px;
+}
+
+/* line 217, ../sass/conversations.scss */
+#nameOfTheUser:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* line 222, ../sass/conversations.scss */
+#newMessage {
+  float: right;
+  margin: 15px;
+  border-radius: 2px;
+  background-color: #f9f3f2;
+  border: 1px solid #F9E7E3;
+  box-sizing: content-box;
+  text-align: center;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+  cursor: pointer;
+  padding: 5px;
+  font: 900 16px/16px "Roboto", sans-serif;
+}
+
+/* line 236, ../sass/conversations.scss */
+.childHeader {
+  width: 762px;
+  border-right: 1px solid #F9E7E3;
+  border-bottom: 1px solid #F9E7E3;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+  height: 60px;
+  margin-left: 237px;
+}
+
+/* line 245, ../sass/conversations.scss */
+.headerOfConversations {
+  width: 235px;
+  height: 60px;
+}
+
+/* line 250, ../sass/conversations.scss */
+#newMessagePopUp {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.47);
+  height: 400px;
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -250px;
+  display: none;
+  z-index: 2;
+}
+
+/* line 265, ../sass/conversations.scss */
+#newMessageTitle {
+  height: 20px;
+  padding: 7px 0;
+  width: 400px;
+  font: 900 16px/16px "Roboto", sans-serif;
+}
+
+/* line 272, ../sass/conversations.scss */
+#new_message_usernameMessageSend {
+  border: none;
+  height: 25px;
+  width: 363px;
+  color: #d82132;
+}
+
+/* line 280, ../sass/conversations.scss */
+#new_message_text {
+  border: 1px solid #f9e7e3;
+  height: 148px;
+  margin-top: 15px;
+  resize: none;
+  width: 400px;
+}
+
+/* line 288, ../sass/conversations.scss */
+.containerOfPopUp {
+  height: 300px;
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 404px;
+}
+
+/* line 295, ../sass/conversations.scss */
+.inputUsername {
+  border-bottom: 1px solid #f9e7e3;
+  display: inline-block;
+  height: 30px;
+  margin-top: 15px;
+  width: 404px;
+}
+
+/* line 303, ../sass/conversations.scss */
+#closeButtonOfPopUp {
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+
+/* line 314, ../sass/conversations.scss */
+#new_message_save {
+  background-color: #f9f3f2;
+  border: medium none;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+/* line 322, ../sass/conversations.scss */
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  display: none;
+}
+
+/* line 335, ../sass/conversations.scss */
+.popUpWithSearchedUsersForNewMessage {
+  background-color: #fff;
+  border: 1px solid #f9e7e3;
+  height: 340px;
+  left: 475px;
+  position: absolute;
+  top: 259px;
+  width: 402px;
+  z-index: 3;
+  display: none;
+}
+
+/* line 347, ../sass/conversations.scss */
+.searchedUsers {
+  color: #d82132;
+  padding: 10px;
+  width: 382px;
+}
+
+/* line 353, ../sass/conversations.scss */
+.searchedUsers:hover {
+  cursor: pointer;
+  background-color: #d82132;
+  color: #fff;
+}
+
+/* line 359, ../sass/conversations.scss */
+#usernameInInput {
+  display: inline;
+  color: #d82132;
+}
+
+/* line 364, ../sass/conversations.scss */
+::-webkit-input-placeholder {
+  color: #444444;
+}
+
+/* line 368, ../sass/conversations.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #444444;
+}
+
+/* line 372, ../sass/conversations.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #444444;
+}
+
+/* line 376, ../sass/conversations.scss */
+:-ms-input-placeholder {
+  color: #444444;
+}
